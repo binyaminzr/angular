@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "s3-file-uploader-app"
+    }
+  },
+  "defaultProject": "s3-file-uploader-app",
+  "cli": {
+    "analytics": "ab4f0ded-6f2c-4aa0-b0fd-31d0b343c8d3"
+  }
 }

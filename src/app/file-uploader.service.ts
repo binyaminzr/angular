@@ -11,6 +11,6 @@ export class FileUploaderService {
   constructor(private http : HttpClient) { }
   // My Students: please replace the post url below 
   fileUpload(file: FormData) {
-    return this.http.post('http://localhost:8080/upload-ng', file);
+    return this.http.post('http://ec2-54-162-243-220.compute-1.amazonaws.com/upload-ng', file);
   }
 }
