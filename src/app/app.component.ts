@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FileUploaderService } from './file-uploader.service';
+import {Observable,throwError} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -26,14 +27,14 @@ export class AppComponent {
     this.fileObj = FILE;
     console.log(this.fileObj);
   }
-  
+
   onFileUpload() {
 
     if (!this.fileObj) {
       this.errorMsg = true;
       return
     }
-    
+
     const fileForm = new FormData();
     fileForm.append('file', this.fileObj);
     this.fileUploadService.fileUpload(fileForm).subscribe(res => {

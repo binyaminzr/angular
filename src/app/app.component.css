@@ -11,7 +11,10 @@
       text-align: center;
   }
 
-  h1,
+  h1{
+    text-align: center;
+    text-shadow: 2px 2px #d1c3c3;
+  }
   h2,
   h3,
   h4,
@@ -27,6 +30,36 @@
   .spacer {
     flex: 1;
   }
+ input{
+  border-bottom-color: #b3b3b3;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-style: solid;
+  /* border-bottom-width: 10px; */
+  border-left-color: #b3b3b3;
+  border-left-style: solid;
+  /* border-left-width: 10px; */
+  border-right-color: #b3b3b3;
+  border-right-style: solid;
+  /* border-right-width: 1px; */
+  border-top-color: #b3b3b3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-style: solid;
+  /* border-top-width: 10px; */
+ }
+
+ /* button{
+  background-color: #e7e7e7; 
+  color: black;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ } */
+
 
   .toolbar {
     position: absolute;
