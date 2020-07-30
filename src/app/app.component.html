@@ -12,8 +12,8 @@
 
 <!-- <div class="content" role="main"> -->
 
-  <!-- Highlight Card -->
-  <!-- <div class="card highlight-card card-small">
+<!-- Highlight Card -->
+<!-- <div class="card highlight-card card-small">
 
     <svg id="rocket" alt="Rocket Ship" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
       <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
@@ -34,16 +34,22 @@
   </div>
 </div> -->
 
-<h1>MY MOVIES TO WATCH</h1>
+<h1>Crime Department</h1>
+<div class="body">
 
-<!-- file uploader -->
-<div class="main">
-  <h1>Please upload the poster</h1>
-  <input (change)="onFilePicked($event)" class="custom-file-input"
-         placeholder="Upload File" type="file" />
-  <button (click)="onFileUpload()" class="myButton">Upload File</button>
-  <p *ngIf="errorMsg"> Please Select A File</p>
+  <div class="pic">
+    <img src="../assets/criminal.jpg">
+  </div>
+
+  <!-- file uploader -->
+  <div class="main">
+    <h3>Please upload picture of the suspect</h3>
+    <input (change)="onFilePicked($event)" class="custom-file-input" placeholder="Upload File" type="file" />
+    <button (click)="onFileUpload()" class="myButton">Upload File</button>
+    <p *ngIf="errorMsg"> Please Select A File</p>
+  </div>
+
+
 </div>
-
-
+<p *ngIf="suspect"> {{suspect.name}}</p>
 

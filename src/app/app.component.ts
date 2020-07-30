@@ -1,4 +1,4 @@
-import { Celebs } from './interfaces/celebs';
+import { Suspects } from './interfaces/suspects';
 import { Component } from '@angular/core';
 import { FileUploaderService } from './file-uploader.service';
 import {Observable,throwError} from 'rxjs';
@@ -15,7 +15,7 @@ export class AppComponent {
   fileUrl: string;
   errorMsg: boolean;
   title = 's3-file-uploader-app';
-  celeb:Celebs[];
+  suspect:Suspects[];
 
   constructor(private fileUploadService: FileUploaderService) {
     this.errorMsg = false;
@@ -40,8 +40,8 @@ export class AppComponent {
     const fileForm = new FormData();
     fileForm.append('file', this.fileObj);
     this.fileUploadService.fileUpload(fileForm).subscribe(res => {
-      this.celeb=res;
-      console.log(this.celeb);
+      this.suspect=res;
+      console.log(this.suspect);
       this.fileUrl = res['image'];
     });
   }

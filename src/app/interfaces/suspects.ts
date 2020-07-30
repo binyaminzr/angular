@@ -1,4 +1,4 @@
-export interface Celebs {
+export interface Suspects {
     imageName?:string,
     similarity?:number,
     Detention_period?:string,
