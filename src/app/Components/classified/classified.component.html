@@ -1,0 +1,15 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar *ngIf = "categoryImage">
+         <img [src] = "categoryImage">
+      </div>
+      <mat-card-title>{{category}}</mat-card-title>
+      <mat-card-subtitle>classification result</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{classifyService.doc}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+ 

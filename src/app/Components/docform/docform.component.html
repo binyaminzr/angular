@@ -1,0 +1,22 @@
+<mat-card>
+    <h1>Classify a document</h1>
+    <form #classifyForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="example-container">
+        <mat-form-field style="width: 400px;">
+            <textarea
+                matInput placeholder="To classify"
+                [(ngModel)] = "text"
+                name = "text"
+                cdkTextareaAutosize
+                cdkAutosizeMinRows="10"
+                cdkAutosizeMaxRows="20"                           
+            >
+            </textarea>     
+        </mat-form-field>                  
+        <div >
+            <button mat-raised-button color="primary" >Classify</button>
+        </div>
+      </div>
+    </form>
+    </mat-card>
+ 
