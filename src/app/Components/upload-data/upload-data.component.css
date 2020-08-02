@@ -75,6 +75,19 @@ margin-top: 2%;
   margin-left:5px;
   background-color: #b3b3b3;
  }
+ .noResultDiv{
+ margin-top:50px;
+ }
+.noResultText{
+  font-size: 18px;
+  font-weight: bold;
+text-align: center;
+ }
+
+ .refresh{
+  margin-left: 45%;
+  margin-top: 2%;
+ }
 
 
   .toolbar {

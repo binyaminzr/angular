@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Suspects } from 'src/app/interfaces/suspects';
 import { FileUploaderService } from 'src/app/Services/file-uploader.service';
@@ -17,8 +18,7 @@ export class UploadDataComponent implements OnInit {
   errorMsg: boolean;
   title = 's3-file-uploader-app';
   suspect:Suspects[];
- picture;
-  constructor(private fileUploadService: FileUploaderService) {
+  constructor(private fileUploadService: FileUploaderService,private router:Router) {
     this.errorMsg = false;
   }
 
@@ -48,7 +48,11 @@ export class UploadDataComponent implements OnInit {
         null
       }
       this.suspect=res;
-      console.log(res)
+      console.log(this.suspect)
     });
   }
+
+  refresh(): void {
+    window.location.reload();
+}
 }

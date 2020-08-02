@@ -24,12 +24,14 @@ import { UploadDataComponent } from './Components/upload-data/upload-data.compon
 import { HomeComponent } from './Components/home/home.component';
 import { ClassifiedComponent } from './Components/classified/classified.component';
 import { DocformComponent } from './Components/docform/docform.component';
+import { ResultsComponent } from './Components/results/results.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'uploadData', component: UploadDataComponent },
   { path: 'docform', component: DocformComponent },
   { path: 'classified', component: ClassifiedComponent },
+  { path: 'results/:name', component: ResultsComponent },
   { path: "",
     redirectTo: '/home',
     pathMatch: 'full'
@@ -44,6 +46,7 @@ const appRoutes: Routes = [
     HomeComponent,
     ClassifiedComponent,
     DocformComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,

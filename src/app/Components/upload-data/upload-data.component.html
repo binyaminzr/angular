@@ -1,20 +1,42 @@
-<h1>Crime Department</h1>
-<div class="body">
+<div *ngIf="!suspect">
+    <h1>Crime Department</h1>
+    <div class="body">
 
-    
-    <div class="pic">
-        <img src="../assets/criminal.jpg">
-    </div>
 
-    <!-- file uploader -->
-    <div class="main">
-        <h3>Please upload picture of the suspect</h3>
-        <input (change)="onFilePicked($event)" class="custom-file-input" placeholder="Upload File" type="file" />
-        <button (click)="onFileUpload()" class="myButton">Upload File</button>
-        <p *ngIf="errorMsg"> Please Select A File</p>
+        <div class="pic">
+            <img src="../assets/criminal.jpg">
+        </div>
+
+        <!-- file uploader -->
+        <div class="main">
+            <h3>Please upload picture of the suspect</h3>
+            <input (change)="onFilePicked($event)" class="custom-file-input" placeholder="Upload File" type="file" />
+            <button (click)="onFileUpload()" class="myButton">Upload File</button>
+            <p *ngIf="errorMsg"> Please Select A File</p>
+        </div>
     </div>
 
 
 </div>
-<p *ngIf="suspect"> {{suspect.similarity}}</p>
-<!-- <p>parseFloat("1.555").toFixed(2)</p> -->
+<!-- <div *ngIf="suspect && !suspect.Detention_period">
+    <p>there is no result</p>
+</div> -->
+
+<div *ngIf="suspect">
+    <div *ngIf="!suspect.Detention_period" class="noResultDiv">
+        <p class="noResultText">Unfortunately we do not have information for the suspect in the photo you uploaded.</p>
+        <p class="noResultText">If we receive such information in the future, we will notify you as soon as possible.
+        </p>
+    </div>
+    <div *ngIf="suspect.Detention_period">
+        <!-- <p class="header"></p>
+        <p>{{suspect.name}}</p> -->
+<h3>Data results</h3>
+        <p> <b>Name: </b> {{suspect.name}} <br>  <b>Detention period: </b>{{suspect.Detention_period}} <br> <b>date of
+                birth: </b>
+            {{suspect.date_of_birth}} <br> <b>Year of detention: </b>{{suspect.Year_of_detention}}<br>  <b>Reason of
+                detention: </b> {{suspect.Reason_of_detention}} </p>
+    </div>
+    <button class="refresh" (click)="refresh()">to new search</button>
+
+</div>
