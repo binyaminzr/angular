@@ -44,9 +44,9 @@ export class UploadDataComponent implements OnInit {
 
       {
         res.similarity ?
-        res.similarity = parseFloat(res.similarity).toFixed(2)
-        :
-        null
+          res.similarity = parseFloat(res.similarity).toFixed(2)
+          :
+          null
       }
       this.suspect = res;
       console.log(this.suspect)
@@ -54,6 +54,6 @@ export class UploadDataComponent implements OnInit {
   }
 
   refresh() {
-    location.reload(true);
+    this.suspect=null;
   }
 }
