@@ -41,15 +41,14 @@ export class UploadDataComponent implements OnInit {
     const fileForm = new FormData();
     fileForm.append('file', this.fileObj);
     this.fileUploadService.fileUpload(fileForm).subscribe(res => {
+      
+      {res.similarity?
+        res.similarity=parseFloat(res.similarity).toFixed(2)
+        :
+        null
+      }
       this.suspect=res;
       console.log(res)
-     
-      // this.fileUrl = res['image'];
-      // this.fileUploadService.getPicture(res.imageName).subscribe(res => {
-      //   console.log("dfsd")
-      //   this.picture=res;
-      //   console.log(res)
-      // });
     });
   }
 }
