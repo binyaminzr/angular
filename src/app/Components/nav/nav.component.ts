@@ -28,6 +28,14 @@ export class NavComponent {
         this.title = 'File uploader';
         console.log(val);
       }
+      if (location.path() == "/home") {
+        this.title = 'Identifying criminals';
+        console.log(val);
+      }
+      if (location.path() == "/docform") {
+        this.title = 'Classification of crimes';
+        console.log(val);
+      }
 
     });   
   }
