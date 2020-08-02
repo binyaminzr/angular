@@ -20,20 +20,20 @@
 
 <div *ngIf="suspect">
     <div *ngIf="!suspect.Detention_period" class="noResultDiv">
-        <img class="errorImg" src="../../../assets/noMatch.jpg"/>
+        <img class="errorImg" src="../../../assets/noMatch.jpg" />
         <p class="noResultText">Unfortunately we do not have information for the suspect in the photo you uploaded.</p>
         <p class="noResultText">If we receive such information in the future, we will notify you as soon as possible.
         </p>
-       
+
     </div>
     <div *ngIf="suspect.Detention_period">
-<h2>Data results</h2>
-<img class="scsImg" src="../../../assets/success.jpg"/>
-        <p class="resultData"> <b>Name: </b> {{suspect.name}} <br>  <b>Detention period: </b>{{suspect.Detention_period}} <br> <b>date of
-                birth: </b>
-            {{suspect.date_of_birth}} <br> <b>Year of detention: </b>{{suspect.Year_of_detention}}<br>  <b>Reason of
-                detention: </b> {{suspect.Reason_of_detention}} </p>
-              
+        <h2>Data results</h2>
+        <img class="scsImg" src="../../../assets/success.jpg" />
+        <p class="resultData"><b>Name: </b> {{suspect.name}}</p>
+        <p class="resultData"><b>Detention period: </b>{{suspect.Detention_period}}</p>
+        <p class="resultData"><b>date ofbirth: </b>{{suspect.date_of_birth}}</p>
+        <p class="resultData"><b>Year of detention: </b>{{suspect.Year_of_detention}}</p>
+        <p class="resultData"><b>Reason of detention: </b> {{suspect.Reason_of_detention}}</p>
     </div>
     <button class="refresh" (click)="refresh()">to new search</button>
 
