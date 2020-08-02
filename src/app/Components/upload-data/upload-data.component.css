@@ -98,6 +98,14 @@ text-align: center;
    font-size: 18px;
  }
 
+ .errorImg{
+   margin-left: 35%;
+ }
+.scsImg{
+  max-width:600px;
+  max-height: 200px;
+  margin-left: 40%;
+}
   .toolbar {
     position: absolute;
     top: 0;
