@@ -8,9 +8,10 @@ import { map } from 'rxjs/operators';
 })
 export class ClassifyService {
 
-  private url = "https://rniqbt3fbh.execute-api.us-east-1.amazonaws.com/beta";
+  private url = " https://h6xxdwpk67.execute-api.us-east-1.amazonaws.com/beta";
+  // private url = "https://dl2qgy18x8.execute-api.us-east-1.amazonaws.com/beta";
 
-  public categories:object = {0: 'mur', 1: 'entertainment', 2: 'politics', 3: 'sport', 4: 'tech'};
+  public categories:object = {0: 'Murder', 1: 'robbery', 2: 'kidnapping', 3: 'Theft', 4: 'bribe'};
 
   public doc:string;
 

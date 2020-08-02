@@ -1,6 +1,6 @@
 import { Suspects } from './interfaces/suspects';
 import { Component } from '@angular/core';
-import { FileUploaderService } from './file-uploader.service';
+import { FileUploaderService } from './Services/file-uploader.service';
 import {Observable,throwError} from 'rxjs';
 
 @Component({

@@ -1,17 +1,18 @@
 <h1>Crime Department</h1>
 <div class="body">
 
-  <div class="pic">
-    <img src="../assets/criminal.jpg">
-  </div>
+    
+    <div class="pic">
+        <img src="../assets/criminal.jpg">
+    </div>
 
-  <!-- file uploader -->
-  <div class="main">
-    <h3>Please upload picture of the suspect</h3>
-    <input (change)="onFilePicked($event)" class="custom-file-input" placeholder="Upload File" type="file" />
-    <button (click)="onFileUpload()" class="myButton">Upload File</button>
-    <p *ngIf="errorMsg"> Please Select A File</p>
-  </div>
+    <!-- file uploader -->
+    <div class="main">
+        <h3>Please upload picture of the suspect</h3>
+        <input (change)="onFilePicked($event)" class="custom-file-input" placeholder="Upload File" type="file" />
+        <button (click)="onFileUpload()" class="myButton">Upload File</button>
+        <p *ngIf="errorMsg"> Please Select A File</p>
+    </div>
 
 
 </div>

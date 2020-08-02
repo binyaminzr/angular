@@ -25,7 +25,6 @@ import { HomeComponent } from './Components/home/home.component';
 import { ClassifiedComponent } from './Components/classified/classified.component';
 import { DocformComponent } from './Components/docform/docform.component';
 
-
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'uploadData', component: UploadDataComponent },
@@ -44,7 +43,7 @@ const appRoutes: Routes = [
     UploadDataComponent,
     HomeComponent,
     ClassifiedComponent,
-    DocformComponent
+    DocformComponent,
   ],
   imports: [
     BrowserModule,
