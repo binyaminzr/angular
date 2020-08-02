@@ -17,8 +17,8 @@ export class UploadDataComponent implements OnInit {
   fileUrl: string;
   errorMsg: boolean;
   title = 's3-file-uploader-app';
-  suspect:Suspects[];
-  constructor(private fileUploadService: FileUploaderService,private router:Router) {
+  suspect: Suspects[];
+  constructor(private fileUploadService: FileUploaderService, private router: Router) {
     this.errorMsg = false;
   }
 
@@ -41,18 +41,19 @@ export class UploadDataComponent implements OnInit {
     const fileForm = new FormData();
     fileForm.append('file', this.fileObj);
     this.fileUploadService.fileUpload(fileForm).subscribe(res => {
-      
-      {res.similarity?
-        res.similarity=parseFloat(res.similarity).toFixed(2)
+
+      {
+        res.similarity ?
+        res.similarity = parseFloat(res.similarity).toFixed(2)
         :
         null
       }
-      this.suspect=res;
+      this.suspect = res;
       console.log(this.suspect)
     });
   }
 
   refresh(): void {
     window.location.reload();
-}
+  }
 }
