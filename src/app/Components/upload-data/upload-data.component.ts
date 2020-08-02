@@ -53,7 +53,7 @@ export class UploadDataComponent implements OnInit {
     });
   }
 
-  refresh(): void {
-    window.location.reload();
+  refresh() {
+    location.reload(true);
   }
 }
