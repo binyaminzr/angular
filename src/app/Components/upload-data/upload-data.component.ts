@@ -32,7 +32,6 @@ export class UploadDataComponent implements OnInit {
   }
 
   onFileUpload() {
-
     if (!this.fileObj) {
       this.errorMsg = true;
       return
@@ -49,6 +48,7 @@ export class UploadDataComponent implements OnInit {
           null
       }
       this.suspect = res;
+      // if(this.suspect.name == "doesn't exists")
       console.log(this.suspect)
     });
   }

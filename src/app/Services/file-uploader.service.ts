@@ -13,7 +13,7 @@ export class FileUploaderService {
   constructor(private http : HttpClient) { }
   // My Students: please replace the post url below 
   fileUpload(file: FormData):Observable<any> {
-    return this.http.post('http://ec2-54-162-243-220.compute-1.amazonaws.com/upload-ng', file)
+    return this.http.post('http://ec2-44-197-183-80.compute-1.amazonaws.com/upload-ng', file)
   }
 
   // getPicture(picName:string):Observable<any>{

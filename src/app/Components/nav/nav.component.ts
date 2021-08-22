@@ -29,7 +29,7 @@ export class NavComponent {
         console.log(val);
       }
       if (location.path() == "/home") {
-        this.title = 'Identifying criminals';
+        this.title = 'Security Department';
         console.log(val);
       }
       if (location.path() == "/docform") {

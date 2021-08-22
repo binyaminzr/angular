@@ -73,11 +73,11 @@ margin-top: 2%;
  }
 
  button{
-   height:40px;
-  border-radius: 50%;
-  font-weight: bolder;
+  height:40px;
+  border-radius: 35%;
+  font-weight: bolder; 
   margin-left:5px;
-  background-color: #b3b3b3;
+  background-color: #265fa0;
  }
  .noResultDiv{
  margin-top:50px;

@@ -31,8 +31,8 @@ export class AppComponent {
   }
 
   onFileUpload() {
-
     if (!this.fileObj) {
+
       this.errorMsg = true;
       return
     }
